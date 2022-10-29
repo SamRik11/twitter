@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import { SideBarMenu } from "./SideBarMenu";
+import  SideBarMenu  from "./SideBarMenu";
 import {  ClipboardDocumentListIcon, HomeIcon } from "@heroicons/react/24/solid";
 import { BellIcon,BookmarkIcon,ClipboardIcon,HashtagIcon, InboxIcon, UsersIcon } from "@heroicons/react/24/outline";
 
-export const SideBar = () => {
+export default function SideBar  ()  {
   return (
     <div className="hidden sm:flex flex-col p-2 fixed xl:items-start h-full">
       {/* twitter logo */}

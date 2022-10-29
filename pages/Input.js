@@ -1,7 +1,7 @@
 import { FaceSmileIcon, PhotoIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 
-export const Input = () => {
+export default function Input  ()  {
   return (
     <div className='flex border-b p-3 border-gray-200 space-x-3'>
         <img className='w-11 h-11 rounded-full cursor-pointer' src='https://media-exp1.licdn.com/dms/image/C4D03AQE2MeDKG-GnEA/profile-displayphoto-shrink_200_200/0/1658045991027?e=1670457600&v=beta&t=-T5_jLvnIl_hYepjgEa4Xtb3K2P401C4u0Bw3nx8Zps' alt='input'/>

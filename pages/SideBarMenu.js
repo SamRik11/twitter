@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const SideBarMenu = ({Icon,text,active}) => {
+export default function SideBarMenu  ({Icon,text,active})  {
   return (
     <div className='hover-effect flex items-center text-gray-700 justify-center xl:justify-start text-lg space-x-3'>
         <Icon className='h-7'/>
