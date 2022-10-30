@@ -5,7 +5,7 @@ import  Feed  from './Feed'
 import  SideBar  from './SideBar'
 import { Widgets } from './Widgets'
 
-export default function Home({res}) {
+export default function Home({res,randomUser}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,17 +19,20 @@ export default function Home({res}) {
       {/* Feed */}
       <Feed/>
       {/* widgets */}
-      <Widgets res={res.articles}/>
+      <Widgets res={res.articles} randomUser={randomUser}/>
       </main>
     </div>
   )
 }
 //https://saurav.tech/NewsAPI/top-headlines/category/business/in.json
 export async function getServerSideProps(){
-  const res=await fetch("https://saurav.tech/NewsAPI/top-headlines/category/business/in.json").then((res)=>res.json())
+  const res=await fetch("https://saurav.tech/NewsAPI/top-headlines/category/business/in.json").then((res)=>res.json());
+  //who to follow
+  const randomUser=await fetch("https://randomuser.me/api/?results=50").then((res)=>res.json());
   return{
     props:{
       res,
+      randomUser,
     }
   }
 }
